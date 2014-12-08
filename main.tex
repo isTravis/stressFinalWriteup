@@ -85,7 +85,11 @@ Interview and journalling methods are versatile and highly dimensional. However,
 
 Likert-like questionnaires have the advantage of being quick to create and use, and produce data which is easy to analyze and analytically rigorous (CITE, internal consistency). Because of these advantages, Likert-like methods are common both in psychometric studies and other fields. However, these methods face major shortcomings in terms of their bias and validity. First, they do not account for different underlying distributions for each subject. For example, some subjects may hesitate to report extremes. Second, they usually only allow for discrete inputs (e.g. How stressed are you from 1-5) whereas the metric in question is usually continuous.
 
-Event-based questionnaire forms can further be classified by the time-scale in question. Some forms revolve around life events, while others are concerned with daily events or chronic stress. Regardless of the time scale, these questionnaire-like forms, while having the advantage of tying stress to specific, relatable events, also face major limitations. For instance, these forms are dependent on subjects having experienced a certain list of events, and therefore are demographic-dependent. Further, these forms, similar to the Likert-like forms, do not account for differences between individuals. For instance, “singing in public” may be extremely stressful for one subject while being pleasurable for another. Lastly, these forms are lacking from an experience point-of-view: they require a large, tedious time investment from a subject.
+Event-based questionnaire forms can further be classified by the time-scale in question. Some forms revolve around life events, while others are concerned with daily events or chronic stress. (CITE, http://www.macses.ucsf.edu/research/psychosocial/stress.php\#interview) Regardless of the time scale, these questionnaire-like forms, while having the advantage of tying stress to specific, relatable events, also face major limitations. For instance, these forms are dependent on subjects having experienced a certain list of events, and therefore are demographic-dependent. Further, these forms, similar to the Likert-like forms, do not account for differences between individuals. For instance, “singing in public” may be extremely stressful for one subject while being pleasurable for another. Lastly, these forms are lacking from an experience point-of-view: they require a large, tedious time investment from a subject.
+
+http://www.stresshumain.ca/documents/pdf/Mesures%20physiologiques/CESH_howMesureStress-MB.pdf
+http://www.macses.ucsf.edu/research/psychosocial/stress.php
+http://www.humanstress.ca/researchers/measure-stress/questionnaires.html
 
 
 \section{Proposed Design Additions}
@@ -99,8 +103,6 @@ stressSpectra is designed as a web-accessible application. Most generally, we ca
 The backend is a contained module which stores the varying stress content, accepts votes comparing these stress content, provides random contestants (i.e. stress events), and makes analyzed results accessible to HTTP requests. This functionality is all built on top of Flask [cite] - a Python-based microframework. The framework is hosted on Amazon’s Elastic-beanstalk service, which allows for dynamic scaling based on site usage and demand. All votes are received and stored in a single global pool. Votes are then processed to calculate global results and an individual’s results separately. Once processed, the vote is marked so that all future results can be calculated without re-processing old votes. This allows us to update results very quickly and with low computation-overhead. 
 
 The frontend is built on top of Angular [cite] - a javascript framework. The frontend manages the calls to the backend API and dictates the interactions and experience of the user. All front-end code is hosted statically on Amazon’s S3 service. The user-experience is separated into 3 main sections: Calibrate, Measure, and Compare. 
-
-
 
 
 \section{Calibrating Baseline}
@@ -164,7 +166,6 @@ We’ve explored a way to make personalized, dynamic stress measurements. The ev
 
 
 Future steps would include techniques for reducing the required number of votes. Letting users compare to other users, rather than simply global. 
-
 
 
 

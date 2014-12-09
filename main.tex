@@ -143,7 +143,28 @@ The user's spectrum is ordered from most to least stressful. Each stress situati
 \section{Evaluation}
 To evaluate stressSpectra we built a user study and distributed it to a set of people (N=10). The study has each participant complete three different stress measurements: 1) a simple 1-10 self-report of stress, 2) a Holmes and Rahe stress test, and 3) a stressSpectra profile. Each participant is then also asked to provide qualitative feedback on the experience. 
 
-\begin{figure}[!h]
+
+Figure \ref{fig:rangeuse} shows histograms of the measured scores for each test. Some first observations of the distribution patterns are interesting. The Likert scale shows a bifurcation and is heavily weighted towards the upper end of the spectrum. The Holmes and Rahe distribution, which has a minimum score of 0 and a maximum possible score of 1400, shows a very strong bias towards the lower end of its range. The stressSpectra distribution is more similar to a Gaussian distribution with a mean near the middle of the full range. 
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.9\columnwidth]{rangeUse}
+\caption{Histogram of measurements for each stress test.}
+\label{fig:rangeuse}
+\end{figure}
+
+
+Figure \ref{fig:correlation} shows a matrix with the correlation values for each pair of results. As is also shown in Figure \ref{fig:evalreg}, the Holmes and Rahe measurements are negatively correlated with the Likert and stressSpectra measurements. The Likert and stressSpectra measurements are 69\% correlated with a p-value of 0.028.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\columnwidth]{correlation}
+\caption{Matrix showing correlation values for each pair of tests.}
+\label{fig:correlation}
+\end{figure}
+
+
+Figure \ref{fig:evalreg} shows the linear regression calculation between all pairs of measurements. We can see that the stressSpectra and Likert scales are positively correlated. Surprisingly, the Holmes and Rahe measurements are negatively correlated to both the Likert and stressSpectra measurements. The conclusions to be made could either be that the test is inaccurate or, more interestingly, that the Holmes and Rahe measurement (which deals more with long-term life events) is an indicator for people's ability to cope with daily in-the-moment stress (as measured by Likert and stressSpectra). Thus, people with high Holmes and Rahe scores have learned to cope well with stress, leading to lower stress readings in their day-to-day life. 
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\columnwidth]{evalRegression}
 \caption{Linear regression comparing the measured scores of the various tests.}
@@ -164,10 +185,12 @@ Such comments also hold true for the personalization of stress events and their 
 The largest effect we saw in the interface design was the inclusion of the 'Joy Mode' button. Despite the simple and irrelevance of animated GIFs and smiley faces to the task at hand, the little moment of happiness and distraction were immediately resultant in smiles and what appeared to be an enhanced enthusiasm to get through the next set of votes. While we were only able to observe a small set of the evaluation participants, we think that the inclusion of such playful elements give the project a less clinically-serious feel which is important for the sake of making stress measurement and discussion a part of everyday healthy life, as opposed to a symptom that must be medically treated. 
 
 \section{Conclusion}
-We have explored a way to make personalized, dynamic stress measurements. The evaluation suggests X. The qualitative appearance of users as they used stressSpectra showed Y. Joy mode seemed important and showed Z.
+We have explored a way to make personalized, dynamic stress measurements. The quantitative evaluation, while limited in participant size showed correlation between the stressSpectra measurements and typical Likert-scale measurements. The stressSpectra results also demonstrated a less bifurcated spectrum of scores and results, though it was difficult to make concrete quantitative conclusions from the small population size.
+
+The qualitative feedback from users of the application suggested that while the extremes held true (the very stressful and very non-stressful events were accurate) the middle range of results were less than ideal. This indicates a need to either 1) collect more votes, or 2) more intelligently produce our rankings. Further qualitative feedback was positive and suggested a high level of engagement with the application. This engagement seems to be largely driven by 'Joy mode' which seemed to add a playful and engaging aspect to the site that other stress measurements lack. 
 
 
-Future steps would include techniques for reducing the required number of votes. Letting users compare to other users, rather than simply global. 
+Future steps we envision designing a more intelligent system that can further reduce the number of required votes. We find that giving quick results is key to generating an experience that people stick with. Furthermore, we can see additional features on the Compare page having much utility. Enabling users to compare to other users pr sets of users (say, all users in a given state or age-range), in addition to the global range, would provide a richer tool for understanding one's own idiosyncrasies. Importantly, with more time, we also see value in launching a wider study around the evaluation metrics with a much larger sample size and diversity of tests.
 
 
 

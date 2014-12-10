@@ -79,7 +79,7 @@ Our stress levels dictate much of our day-to-day experience \cite{kanner1981comp
 
 
 \section{Existing Methods}
-Existing methods for self-reporting subjective stress, excluding physiological methods, fall into four categories. In first two interview methods and journaling methods. In the first category are questionnaires in which a subject reports stress level in terms of a value on a numeric scale. The Likert psychometric scale is a common example \cite{maurer1998comparison}. The second category consists of questionnaires in which a subject marks which events she has experienced. Examples include the Holmes and Rahe scale, the Perceived Stress Scale, and the Daily Stress Inventory \cite{CSHSquestionnaires} \cite{holmes1967social} \cite{brantley1988convergence}. 
+Existing methods for self-reporting subjective stress, excluding physiological methods, fall into four categories: interview-based, journal-based, Likert-like, or questionnaire-like. In Likert-like methods, a subject reports stress level in terms of a value on a numeric scale. The Likert psychometric scale is a common example \cite{maurer1998comparison}. In questionnaire-like methods, a subject marks which events she has experienced. Examples include the Holmes and Rahe scale, the Perceived Stress Scale, and the Daily Stress Inventory \cite{CSHSquestionnaires} \cite{holmes1967social} \cite{brantley1988convergence}. 
 
 Interview and journaling methods are versatile and highly dimensional. However, because of their free-form and ad-hoc nature, these methods are difficult to scale, and the data produced from these methods are difficult to analyze rigorously \cite{howtomeasureinhumans}.
 
@@ -89,8 +89,9 @@ Event-based questionnaire forms can further be classified by the time-scale in q
 
 
 \section{Proposed Design Additions}
-As stated in the previous section, while the Likert-like questionnaire and event-based questionnaire are quantitative and analytically tractable, in contrast with the interview and journalling methods, they contain two major flaws. First, they do not account for varying distributions between subjects. Second, they oversimplify the continuous nature of stress.
-Therefore, in creating stressSpectra, we hope to create a tool that calibrates a stress scale peresonalized to a given subject, is dynamic and adjusts to new formation, and treats stress events in a continuous manner.
+As stated in the previous section, while the Likert-like questionnaire and event-based questionnaire are quantitative and analytically tractable, in contrast with the interview and journaling methods, they contain two major flaws. First, they do not account for varying distributions between subjects. Second, they oversimplify the continuous nature of stress.
+
+Therefore, in creating stressSpectra, we hope to create a tool that calibrates a stress scale personalized to a given subject, is dynamic and adjusts to new formation, and treats stress events in a continuous manner.
 With these continuous, dynamic, personalized scales in place, then we aimed to add features which are supplementary, but potentially useful, to the subjects. For instance, stressSpectra contains a feature allowing a subject to compare the distribution of her stress events to the global distribution. Lastly, we aimed to make the experience more fun than a pen-and-paper test.
 
 \section{Architecture}
@@ -185,10 +186,9 @@ Such comments also hold true for the personalization of stress events and their 
 The largest effect we saw in the interface design was the inclusion of the 'Joy Mode' button. Despite the simple and irrelevance of animated GIFs and smiley faces to the task at hand, the little moment of happiness and distraction were immediately resultant in smiles and what appeared to be an enhanced enthusiasm to get through the next set of votes. While we were only able to observe a small set of the evaluation participants, we think that the inclusion of such playful elements give the project a less clinically-serious feel which is important for the sake of making stress measurement and discussion a part of everyday healthy life, as opposed to a symptom that must be medically treated. 
 
 \section{Conclusion}
-We have explored a way to make personalized, dynamic stress measurements. The quantitative evaluation, while limited in participant size showed correlation between the stressSpectra measurements and typical Likert-scale measurements. The stressSpectra results also demonstrated a less bifurcated spectrum of scores and results, though it was difficult to make concrete quantitative conclusions from the small population size.
+We have explored a way to make personalized, dynamic stress measurements. The quantitative evaluation, while limited in participant size, shows a correlation between the stressSpectra measurements and typical Likert-scale measurements. The stressSpectra results also demonstrated a less bifurcated spectrum of scores and results, though it was difficult to make concrete quantitative conclusions from the small population size.
 
 The qualitative feedback from users of the application suggested that while the extremes held true (the very stressful and very non-stressful events were accurate) the middle range of results were less than ideal. This indicates a need to either 1) collect more votes, or 2) more intelligently produce our rankings. Further qualitative feedback was positive and suggested a high level of engagement with the application. This engagement seems to be largely driven by 'Joy mode' which seemed to add a playful and engaging aspect to the site that other stress measurements lack. 
-
 
 Future steps we envision designing a more intelligent system that can further reduce the number of required votes. We find that giving quick results is key to generating an experience that people stick with. Furthermore, we can see additional features on the Compare page having much utility. Enabling users to compare to other users pr sets of users (say, all users in a given state or age-range), in addition to the global range, would provide a richer tool for understanding one's own idiosyncrasies. Importantly, with more time, we also see value in launching a wider study around the evaluation metrics with a much larger sample size and diversity of tests.
 
